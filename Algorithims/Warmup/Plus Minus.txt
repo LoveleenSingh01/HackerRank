@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        DecimalFormat th = new DecimalFormat("#0.000");
+        Scanner sc = new Scanner(System.in);
+        int [] a = new int [100];
+        float n = sc.nextInt();
+        int zero=0,pos=0,neg=0;
+        for (int i=0; i<n; i++)
+            {   
+                a[i]=sc.nextInt();
+                if(a[i]==0)
+                    zero++;
+                if(a[i]<0)
+                    neg++;
+                if(a[i]>0)
+                    pos++;
+        }
+        
+        System.out.println(th.format(pos/n));
+        System.out.println(th.format(neg/n));
+        System.out.println(th.format(zero/n));
+
+    }
+}

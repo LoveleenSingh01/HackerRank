@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        
+        int i=0;
+        String [] s = new String[10001];    
+            
+        while (scan.hasNext())
+            {
+                s[i]=scan.nextLine();
+                i++;
+        }
+            for(i=0; s[i] != null; i++)
+                System.out.println((i+1)+" "+s[i]);
+    }
+}

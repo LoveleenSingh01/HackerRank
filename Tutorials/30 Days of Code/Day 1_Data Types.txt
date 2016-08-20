@@ -1,0 +1,11 @@
+        int a = scan.nextInt();
+        double b = scan.nextDouble();
+        String c;
+
+        scan.nextLine();
+        c = scan.nextLine();
+
+
+        System.out.println(a+i);
+        System.out.println(b+d);
+        System.out.println(s+c);

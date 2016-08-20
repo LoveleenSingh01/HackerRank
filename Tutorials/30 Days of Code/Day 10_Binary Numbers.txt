@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    static int binary(int a)
+        {
+        int count=0, max=0;
+        int [] c = new int[100];
+        int [] b = new int[100];
+        for (int i=0; a>=1; i++)
+        {
+            b[i]=a%2;
+            a=a/2;
+            if (b[i]==1)
+                {
+                count++;
+                c[i]=count;
+            }
+            else
+                count=0;
+                }
+        
+        for (int i=0; i<c.length; i++)
+            {
+            if (c[i]>max)
+                max=c[i];
+        }
+        return(max); 
+    }
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        
+        int a= scan.nextInt();
+        
+        int res = binary(a);
+        System.out.println(res);
+        
+    }
+}
